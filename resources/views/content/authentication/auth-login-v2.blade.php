@@ -37,8 +37,7 @@ $configData = Helper::applClasses();
               <div class="row">
                 @include('layouts.messages')
             </div>
-          <h4 class="card-title mb-1">Welcome to Mechanic! &#x1F44B;</h4>
-          <p class="card-text mb-2">Please sign-in to your account and start the adventure</p>
+          <h4 class="card-title mb-1">Welcome to Findmech! &#x1F44B;</h4>
           <form class="auth-login-form mt-2" action="{{route('login.post')}}" method="POST">
           @csrf
             <div class="form-group">
@@ -76,20 +75,7 @@ $configData = Helper::applClasses();
           <div class="divider my-2">
             <div class="divider-text">or</div>
           </div>
-          <div class="auth-footer-btn d-flex justify-content-center">
-            <a class="btn btn-facebook" href="javascript:void(0)">
-              <i data-feather="facebook"></i>
-            </a>
-            <a class="btn btn-twitter white" href="javascript:void(0)">
-              <i data-feather="twitter"></i>
-            </a>
-            <a class="btn btn-google" href="javascript:void(0)">
-              <i data-feather="mail"></i>
-            </a>
-            <a class="btn btn-github" href="javascript:void(0)">
-              <i data-feather="github"></i>
-            </a>
-          </div>
+         
       </div>
     </div>
     <!-- /Login-->
