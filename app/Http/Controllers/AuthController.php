@@ -128,7 +128,7 @@ class AuthController extends Controller
       $ip = trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com"));
       $geoipInfo = geoip()->getLocation($ip);
       $ipData = $geoipInfo->toArray();
-      dd(request()->ip());
+      dd($ipData);
       $id = Sentinel::getUser()->id;
       $user = User::where('id', $id)->first();
       $user->first_name = $request->first_name;
