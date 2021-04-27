@@ -1,0 +1,54 @@
+{
+  "menu": [
+    {
+      "name": "Dashboards",
+      "badge": "2",
+      "badgeClass": "badge badge-light-warning badge-pill ml-auto mr-1",
+      "icon": "home",
+      "type": "vendor",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "dashboard/analytics",
+          "name": "Analytics",
+          "icon": "circle",
+          "slug": "dashboard-analytics",
+          "type": "vendor"
+
+        }
+       
+      ]
+    },
+    
+    
+    {
+      "name": "Account Settings",
+      "url": "/dashboard/account-settings",
+      "icon": "homen7y",
+      "slug": "",
+      "type": "vendor"
+    },
+    
+    {
+      "url": "dashboard/users/",
+      "name": "Users",
+      "icon": "users",
+      "slug": "app-user-list",
+      "type": "admin"
+
+
+    },
+    
+    {
+      "url": "/dashboard/profile",
+      "name": "profile",
+      "icon": "circle",
+      "slug": "dashboard-profile",
+      "type": "vendor"
+
+    }
+      
+  
+   
+  ]
+}
