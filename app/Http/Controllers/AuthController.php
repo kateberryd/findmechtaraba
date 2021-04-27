@@ -123,7 +123,7 @@ class AuthController extends Controller
       return redirect()->route('auth-login-v2');
     }else{
       
-      dd($request->ip);
+      dd($request->ip());
       
       $geoipInfo = geoip()->getLocation('105.112.186.156');
       $ipData = $geoipInfo->toArray();
