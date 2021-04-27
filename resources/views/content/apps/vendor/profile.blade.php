@@ -26,7 +26,7 @@
           <div class="profile-img-container d-flex align-items-center">
             <div class="profile-img">
               <img
-                src="{{asset('images/portrait/small/avatar-s-2.jpg')}}"
+                src="{{asset('images/banner/shop.jpg')}}"
                 class="rounded img-fluid"
                 alt="Card image"
               />
@@ -84,41 +84,83 @@
         <div class="card">
           <div class="card-body">
            
-            <div class="mt-2">
-              <h5 class="mb-75">Joined:</h5>
-              <p class="card-text">{{date('d-m-Y', strtotime($user->created_at))}}</p>
+            <div class="mt-2 row">
+            <div class="col-md-3">
+            <h5 class="mb-75">Joined:</h5>
+
             </div>
-            <div class="mt-2">
-              <h5 class="mb-75">Company Name:</h5>
-              <p class="card-text">{{$user->company_name}}</p>
+            <div class="col-md-3">
+            <p class="card-text">{{date('d-m-Y', strtotime($user->created_at))}}</p>
+
             </div>
-            <div class="mt-2">
+            </div>
+            <div class="mt-2 row">
+             <div class="col-md-3">
+             <h5 class="mb-75">Company Name:</h5>
+             </div>
+             <div class="col-md-3">
+             <p class="card-text">{{$user->company_name}}</p>
+             </div>
+            </div>
+            <div class="mt-2 row">
+              <div class="col-md-3">
               <h5 class="mb-75">Company Address:</h5>
+              </div>
+              <div class="col-md-3">
               <p class="card-text">{{$user->company_address}}</p>
+
+              </div>
             </div>
-            <div class="mt-2">
-              <h5 class="mb-75">First Name:</h5>
+            <div class="mt-2 row">
+            <div class="col-md-3">
+               <h5 class="mb-75">First Name:</h5>
+            </div>
+            <div class="col-md-4">
               <p class="card-text">{{$user->first_name}}</p>
             </div>
-            <div class="mt-2">
-              <h5 class="mb-75">Last Name:</h5>
-              <p class="card-text">{{$user->last_name}}</p>
             </div>
-            <div class="mt-2">
+            <div class="mt-2 row">
+              <div class="col-md-3">
+                <h5 class="mb-75">Last Name:</h5>
+              </div>
+             <div class="col-md-3"> <p class="card-text">{{$user->last_name}}</p></div>
+            </div>
+            <div class="mt-2 row">
+              <div class="col-md-3">
               <h5 class="mb-75">Email:</h5>
-              <p class="card-text">{{$user->email}}</p>
+
+              </div>
+              <div class="col-md-3">
+                <p class="card-text">{{$user->email}}</p>
+
+              </div>
             </div>
-            <div class="mt-2">
+            <div class="mt-2 row">
+              <div class="col-md-3">
               <h5 class="mb-50">Phone Number:</h5>
+
+              </div>
+              <div class="col-md-3">
               <p class="card-text mb-0">{{$user->phone_number}}</p>
+              </div>
             </div>
-            <div class="mt-2">
+            <div class="mt-2 row">
+              <div class="col-md-3">
               <h5 class="mb-50">State:</h5>
-              <p class="card-text mb-0">{{$user->state}}</p>
+              </div>
+              <div class="col-md-3">
+                <p class="card-text mb-0">{{$user->state}}</p>
+
+              </div>
             </div>
-            <div class="mt-2">
-              <h5 class="mb-50">City:</h5>
-              <p class="card-text mb-0">{{$user->city}}</p>
+            <div class="mt-2 row">
+             <div class="col-md-3">
+             <h5 class="mb-50">City:</h5>
+             </div>
+             <div class="col-md-3">
+             <p class="card-text mb-0">{{$user->city}}</p>
+
+             </div>
             </div>
           </div>
         </div>

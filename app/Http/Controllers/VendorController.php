@@ -13,7 +13,7 @@ class VendorController extends Controller
             return redirect()->route('auth-login-v2');
             }else{
                 $pageConfigs = ['pageHeader' => false];
-                return view('/content/dashboard/dashboard-ecommerce', ['pageConfigs' => $pageConfigs]);
+                return view('/content/apps/vendor/dashboard', ['pageConfigs' => $pageConfigs]);
             }
     }
     
@@ -28,4 +28,6 @@ class VendorController extends Controller
             return view('/content/apps/vendor/profile', ['breadcrumbs' => $breadcrumbs, 'user' => $user]);
             }
         }
+    
+       
 }

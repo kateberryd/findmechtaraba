@@ -62,7 +62,7 @@
               <div class="media">
                 <a href="javascript:void(0);" class="mr-25">
                   <img
-                    src="{{asset('images/portrait/small/avatar-s-11.jpg')}}"
+                    src="{{asset('images/banner/shop.jpg')}}"
                     id="account-upload-img"
                     class="rounded mr-50"
                     alt="profile image"

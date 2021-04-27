@@ -9,6 +9,14 @@ use Sentinel;
 class AdminController extends Controller
 {
     //
+    public function dashboard(){
+      if(!Sentinel::forcecheck()){
+        return redirect()->route('auth-login-v2');
+        }else{
+            $pageConfigs = ['pageHeader' => false];
+            return view('/content/dashboard/index', ['pageConfigs' => $pageConfigs]);
+        }
+    }
     
     public function index(){
         if(!Sentinel::forcecheck()){
