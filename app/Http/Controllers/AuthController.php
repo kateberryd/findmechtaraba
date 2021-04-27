@@ -118,15 +118,17 @@ class AuthController extends Controller
     
   }
   
+
+
+  
   public function updateAccount(Request $request){
     if(!Sentinel::forcecheck()){
       return redirect()->route('auth-login-v2');
     }else{
-      
-      dd($request->ip());
-      
-      $geoipInfo = geoip()->getLocation('105.112.186.156');
+      $ip = trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com"));
+      $geoipInfo = geoip()->getLocation($ip);
       $ipData = $geoipInfo->toArray();
+      dd(request()->ip());
       $id = Sentinel::getUser()->id;
       $user = User::where('id', $id)->first();
       $user->first_name = $request->first_name;
