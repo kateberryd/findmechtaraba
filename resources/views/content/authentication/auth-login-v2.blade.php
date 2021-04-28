@@ -43,6 +43,8 @@ $configData = Helper::applClasses();
             <div class="form-group">
               <label class="form-label" for="login-email">Email</label>
               <input class="form-control" id="login-email" type="text" name="email" placeholder="john@example.com" aria-describedby="login-email" autofocus="" tabindex="1" />
+              <small class="text-danger">{{$errors->first('email')}}</small>
+
             </div>
             <div class="form-group">
               <div class="d-flex justify-content-between">
@@ -59,6 +61,7 @@ $configData = Helper::applClasses();
                   </span>
                 </div>
               </div>
+              <small class="text-danger">{{$errors->first('password')}}</small>
             </div>
             <div class="form-group">
               <div div class="custom-control custom-checkbox">

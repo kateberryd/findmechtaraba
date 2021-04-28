@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\QueryException;
 use Carbon\Carbon;
 use App\User;
 use Sentinel;
@@ -22,14 +23,15 @@ class AuthController extends Controller
    */
   public function register(Request $request)
   {
-    // $request->validate([
-    //   'name' => 'required|string',
-    //   'email' => 'required|string|email|unique:users',
-    //   'password' => 'required|string|',
-    //   'c_password' => 'required|same:password',
-    // ]);
+    $request->validate([
+      'name' => 'required|string',
+      'email' => 'required|string|email|unique:users',
+      'password' => 'required|string|',
+      'confirm_password' => 'required|same:password',
+    ]);
     
-
+    try{
+      
     $user = User::create([
       'name' => $request->name,
       'email' => $request->email,
@@ -52,6 +54,18 @@ class AuthController extends Controller
     } else {
       return back()->withInput()->with('error', 'Could not create user. Try again!');
 
+    }}
+    catch (QueryException $e) {
+        
+      $error = array(
+        'message' => "Account for $request->email already exists!",
+        'error' => 'error'
+      );
+
+      $errorCode = $e->errorInfo[1];
+      if($errorCode == 1062){
+        return redirect()->back()->withInput()->with($error);
+      }
     }
   }
   
@@ -78,8 +92,8 @@ class AuthController extends Controller
     $request->validate([
       'email' => 'required|string|email',
       'password' => 'required|string',
-      'remember_me' => 'boolean'
     ]);
+    
     $credentials = request(['email', 'password']);
     if (!Sentinel::forceauthenticate($credentials)){
       return redirect()->back()->with('error', 'Ops... Your Login Credentials did not match');

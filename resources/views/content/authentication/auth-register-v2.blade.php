@@ -34,6 +34,8 @@ $configData = Helper::applClasses();
       <!-- Register-->
     <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
       <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
+      @include('layouts.messages')
+
         <p class="card-text mb-2">Create an Account!</p>
         <form class="auth-register-form mt-2" action="{{route('register.post')}}" method="POST">
           @csrf
@@ -59,14 +61,14 @@ $configData = Helper::applClasses();
           <div class="form-group">
             <label class="form-label" for="register-password">Confirm Password</label>
             <div class="input-group input-group-merge form-password-toggle">
-              <input class="form-control form-control-merge" id="register-password" type="password" name="c_password" placeholder="············" aria-describedby="register-password" tabindex="3" />
+              <input class="form-control form-control-merge" id="register-password" type="password" name="confirm_password" placeholder="············" aria-describedby="register-password" tabindex="3" />
               <div class="input-group-append">
                 <span class="input-group-text cursor-pointer">
                   <i data-feather="eye"></i>
                 </span>
               </div>
             </div>
-            <small class="text-danger">{{$errors->first('c_password')}}</small>
+            <small class="text-danger">{{$errors->first('confirm_password')}}</small>
           </div>
           <div class="form-group">
             <div class="custom-control custom-checkbox">
