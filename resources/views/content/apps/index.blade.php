@@ -295,7 +295,7 @@
                                 <div class="slide-item-info">
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <h4 class="slide-sub-title ltn__secondary-color animated text-uppercase">Welcome to our shop</h4>
-                                        <h1 class="slide-title animated">The Parts Of Shock Absorbers  Assembly</h1>
+                                        <h1 class="slide-title animated">No been </h1>
                                         <div class="slide-brief animated">
                                             <p>Predictive analytics is drastically changing the real estate industry. In the past, providing data for quick</p>
                                         </div>
@@ -318,9 +318,9 @@
                                 <div class="slide-item-info">
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <h4 class="slide-sub-title ltn__secondary-color animated text-uppercase">Welcome to our shop</h4>
-                                        <h1 class="slide-title  animated">Get $250 In Total Discounts On A New  Set Of Tires</h1>
+                                        <h1 class="slide-title  animated">No more been stranded </h1>
                                         <div class="slide-brief animated">
-                                            <p>Predictive analytics is drastically changing the real estate industry. In the past, providing data for quick</p>
+                                            <p>Get to meet the nearest mechanics</p>
                                         </div>
                                         <div class="btn-wrapper  animated">
                                             <a href="shop.html" class="theme-btn-1 btn btn-effect-1 text-uppercase">Shop now</a>
@@ -352,10 +352,9 @@
                         </div>
                         <div class="ltn__banner-info">
                             <div class="product-price ltn__secondary-color">
-                                <strong><span>FROM $49.00</span></strong>
+                                <strong><span> Lorem, ipsum dolor sit amet </span></strong>
                             </div>
-                            <h2 class="white-color"><a href="shop.html">Latest & Beauty <br>
-                                Headlights</a></h2>
+                            <h2 class="white-color"><a href="shop.html">Awesome &  <br>Mechanics</a></h2>
                         </div>
                         <div class="banner-button">
                             <a href="shop.html"><i class="fas fa-arrow-right"></i> </a>
@@ -369,7 +368,7 @@
                         </div>
                         <div class="ltn__banner-info">
                             <div class="product-price ltn__secondary-color">
-                                <strong><span>FROM $49.00</span></strong>
+                                <strong><span>FROM </span></strong>
                             </div>
                             <h2 class="white-color"><a href="shop.html">Attractive Car <br>
                                 Dashboard</a></h2>
