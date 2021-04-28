@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
+use DB;
 class PagesController extends Controller
 {
 
@@ -12,6 +13,25 @@ class PagesController extends Controller
   {
     $breadcrumbs = [['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Pages"], ['name' => "Account Settings"]];
     return view('/content/pages/page-account-settings', ['breadcrumbs' => $breadcrumbs]);
+  }
+  
+  public function index()
+  {
+    $lat       =       "28.418715";
+    $lon      =       "77.0478997";
+
+    $vendors = DB::table("users")
+    ->select("*"
+        ,DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
+        * cos(radians(users.latitude)) 
+        * cos(radians(users.longitude) - radians(" . $lon . ")) 
+        + sin(radians(" .$lat. ")) 
+        * sin(radians(users.latitude))) AS distance"))
+        ->groupBy("users.id");
+    $vendors  =  $vendors->having('distance', '<', 80000);
+    $vendors          =    $vendors->orderBy('distance', 'asc');
+    $vendors   = $vendors->get();
+    return view('/content/apps/index')->with('vendors', $vendors);
   }
 
   // Profile

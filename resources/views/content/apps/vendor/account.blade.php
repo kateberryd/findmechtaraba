@@ -62,7 +62,7 @@
               <div class="media">
                 <a href="javascript:void(0);" class="mr-25">
                   <img
-                    src="{{asset('images/banner/shop.jpg')}}"
+                    src="{{ $user->shop_image == null ? asset('images/banner/shop.jpg') :  asset('/uploads/'.$user->shop_image) }}"
                     id="account-upload-img"
                     class="rounded mr-50"
                     alt="profile image"
@@ -70,10 +70,12 @@
                     width="80"
                   />
                 </a>
+                <form class=" mt-2" action="{{route('account-setttings.post')}}" method="POST"  enctype="multipart/form-data">
+
                 <!-- upload and reset button -->
                 <div class="media-body mt-75 ml-1">
                   <label for="account-upload" class="btn btn-sm btn-primary mb-75 mr-75">Upload</label>
-                  <input type="file" id="account-upload" hidden accept="image/*" />
+                  <input type="file" id="account-upload" hidden accept="image/*" name="shop_image" />
                   <button class="btn btn-sm btn-outline-secondary mb-75">Reset</button>
                   <p>Allowed JPG, GIF or PNG. Max size of 800kB</p>
                 </div>
@@ -82,7 +84,6 @@
               <!--/ header media -->
 
               <!-- form -->
-              <form class=" mt-2" action="{{route('account-setttings.post')}}" method="POST">
                  @csrf
                 <div class="row">
                   <div class="col-12 col-sm-6">

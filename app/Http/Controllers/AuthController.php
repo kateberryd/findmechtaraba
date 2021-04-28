@@ -54,6 +54,14 @@ class AuthController extends Controller
 
     }
   }
+  
+  
+  public function login_v2()
+  {
+    $pageConfigs = ['blankPage' => true];
+
+    return view('/content/authentication/auth-login-v2', ['pageConfigs' => $pageConfigs]);
+  }
 
   /**
    * Login user and create token
@@ -130,14 +138,17 @@ class AuthController extends Controller
       $ipData = $geoipInfo->toArray();
       $id = Sentinel::getUser()->id;
       $user = User::where('id', $id)->first();
+      $imageName = time().'.'.$request->shop_image->extension();  
+      $request->shop_image->move(public_path('uploads'), $imageName);
+      $user->shop_image = $imageName;
       $user->first_name = $request->first_name;
       $user->last_name = $request->last_name;
       $user->phone_number = $request->phone_number;
       $user->company_name = $request->company_name;
       $user->company_address = $request->company_address;
       $user->state = $ipData['state_name'];
-      $user->lat = $ipData['lat'];
-      $user->long = $ipData['lon'];
+      $user->latitude = $ipData['lat'];
+      $user->longitude = $ipData['lon'];
       $user->city = $ipData['city'];
       $user->country = $ipData['country'];
       $user->postal_code = $ipData['postal_code'];

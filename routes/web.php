@@ -15,7 +15,7 @@ use App\Http\Controllers\LanguageController;
 Auth::routes(['verify' => true]);
 
 // Main Page Route
-Route::get('/', 'AuthenticationController@login_v2')->name('auth-login-v2');
+Route::get('/', 'PagesController@index')->name('index');
 Route::get('/admin/dashboard', 'AdminController@dashboard');
 Route::group(['prefix' => 'dashboard'], function () {
   Route::get('analytics', 'DashboardController@dashboardAnalytics')->name('dashboard-analytics');
@@ -81,6 +81,7 @@ Route::group(['prefix' => 'dashboard'], function () {
 });
 
 Route::group(['prefix' => 'auth'], function () {
+  Route::get('login', 'AuthController@login_v2')->name('auth-login-v2');
   Route::post('login', 'AuthController@login')->name('login.post');
   Route::get('register', 'AuthenticationController@register_v2')->name('auth-register-v2');
   Route::post('register', 'AuthController@register')->name('register.post');

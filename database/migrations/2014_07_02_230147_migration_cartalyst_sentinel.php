@@ -101,8 +101,8 @@ class MigrationCartalystSentinel extends Migration
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('phone_number')->nullable();
-            $table->string('long')->nullable();
-            $table->string('lat')->nullable();
+            $table->string('longitude')->nullable();
+            $table->string('latitude')->nullable();
             $table->string('company_address')->nullable();
             $table->string('shop_image')->nullable();
             $table->string('state')->nullable();

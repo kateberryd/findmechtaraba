@@ -16,8 +16,9 @@
         <!-- profile cover photo -->
         <img
           class="card-img-top"
-          src="{{asset('images/profile/user-uploads/timeline.jpg')}}"
+          src="{{ $user->shop_image == null ? asset('images/profile/user-uploads/timeline.jpg')  :  asset('/uploads/'.$user->shop_image)}}"
           alt="User Profile Image"
+          height="200"
         />
         <!--/ profile cover photo -->
 
