@@ -262,9 +262,9 @@
                                 <div class="slide-item-info">
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <h4 class="slide-sub-title ltn__secondary-color animated text-uppercase">Welcome to FindMech</h4>
-                                        <h1 class="slide-title  animated">No more been stranded</h1>
+                                        <h1 class="slide-title  animated">No more being stranded</h1>
                                         <div class="slide-brief animated">
-                                            <p>GetIntouch with the nearest mechanic within minutes</p>
+                                            <p>Get Intouch with the nearest mechanic within minutes</p>
                                         </div>
                                         <div class="btn-wrapper  animated">
                                             <a href="/auth/register" class="theme-btn-1 btn btn-effect-1 text-uppercase">Become a our mechanic</a>
@@ -274,7 +274,7 @@
                             </div>
                             <div class="col-lg-6 col-md-5 col-sm-5 align-self-center">
                                 <div class="slide-item-img">
-                                    <a href="shop.html"><img src="/frontend/img/product/1.png" alt="Image"></a>
+                                    <a href="/"><img src="/frontend/img/bg/10.png" alt="Image"></a>
                                 </div>
                             </div>
                         </div>
@@ -288,16 +288,16 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-5 col-sm-5 align-self-center">
                                 <div class="slide-item-img">
-                                    <a href="shop.html"><img src="/frontend/img/product/9.png" alt="Image"></a>
+                                    <a href="/"><img src="/frontend/img/product/9.png" alt="Image"></a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-7 col-sm-7 align-self-center">
                                 <div class="slide-item-info">
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <h4 class="slide-sub-title ltn__secondary-color animated text-uppercase">Welcome to our shop</h4>
-                                        <h1 class="slide-title animated">No been </h1>
+                                        <h1 class="slide-title animated">No more being stranded </h1>
                                         <div class="slide-brief animated">
-                                            <p>Predictive analytics is drastically changing the real estate industry. In the past, providing data for quick</p>
+                                        <p>Get Intouch with the nearest mechanic within minutes</p>
                                         </div>
                                         <div class="btn-wrapper animated">
                                             <a href="#" class="theme-btn-1 btn btn-effect-1 text-uppercase">Find Mechanic</a>
@@ -318,19 +318,19 @@
                                 <div class="slide-item-info">
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <h4 class="slide-sub-title ltn__secondary-color animated text-uppercase">Welcome to our shop</h4>
-                                        <h1 class="slide-title  animated">No more been stranded </h1>
+                                        <h1 class="slide-title  animated">No more being stranded </h1>
                                         <div class="slide-brief animated">
                                             <p>Get to meet the nearest mechanics</p>
                                         </div>
                                         <div class="btn-wrapper  animated">
-                                            <a href="shop.html" class="theme-btn-1 btn btn-effect-1 text-uppercase">Shop now</a>
+                                            <a href="#" class="theme-btn-1 btn btn-effect-1 text-uppercase">Shop now</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-5 col-sm-5 align-self-center">
                                 <div class="slide-item-img">
-                                    <a href="shop.html"><img src="/frontend/img/product/11.png" alt="Image"></a>
+                                    <a href="#"><img src="/frontend/img/product/11.png" alt="Image"></a>
                                 </div>
                             </div>
                         </div>
@@ -348,33 +348,33 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-3">
                         <div class="ltn__banner-img">
-                            <a href="shop.html"><img src="/frontend/img/banner/4.jpg" alt="Image"></a>
+                            <a href="#"><img src="/frontend/img/banner/4.jpg" alt="Image"></a>
                         </div>
                         <div class="ltn__banner-info">
                             <div class="product-price ltn__secondary-color">
                                 <strong><span> Lorem, ipsum dolor sit amet </span></strong>
                             </div>
-                            <h2 class="white-color"><a href="shop.html">Awesome &  <br>Mechanics</a></h2>
+                            <h2 class="white-color"><a href="/">Awesome &  <br>Mechanics</a></h2>
                         </div>
                         <div class="banner-button">
-                            <a href="shop.html"><i class="fas fa-arrow-right"></i> </a>
+                            <a href="/"><i class="fas fa-arrow-right"></i> </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="ltn__banner-item ltn__banner-style-3">
                         <div class="ltn__banner-img">
-                            <a href="shop.html"><img src="/frontend/img/banner/5.jpg" alt="Image"></a>
+                            <a href="/"><img src="/frontend/img/banner/5.jpg" alt="Image"></a>
                         </div>
                         <div class="ltn__banner-info">
                             <div class="product-price ltn__secondary-color">
                                 <strong><span>FROM </span></strong>
                             </div>
-                            <h2 class="white-color"><a href="shop.html">Attractive Car <br>
+                            <h2 class="white-color"><a href="/">Attractive Car <br>
                                 Dashboard</a></h2>
                         </div>
                         <div class="banner-button">
-                            <a href="shop.html"><i class="fas fa-arrow-right"></i> </a>
+                            <a href="/"><i class="fas fa-arrow-right"></i> </a>
                         </div>
                     </div>
                 </div>
