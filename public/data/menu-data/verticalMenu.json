@@ -38,24 +38,30 @@
     
     
     {
-      "name": "Account Settings",
-      "url": "/users/account-settings",
-      "icon": "circle",
-      "slug": "account-settings",
-      "type": "user"
-    },
-    
-    
-    {
       "url": "/users/profile",
       "name": "Profile",
       "icon": "circle",
       "slug": "dashboard-profile",
       "type": "user"
 
-    }
+    },
+    
+    {
+      "url": "/users/mechanics",
+      "name": "Mechanic",
+      "icon": "circle",
+      "slug": "dashboard-profile",
+      "type": "user"
+
+    },
      
- 
+    {
+      "name": "Account Settings",
+      "url": "/users/account-settings",
+      "icon": "circle",
+      "slug": "",
+      "type": "user"
+    }
   
    
   ]

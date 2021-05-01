@@ -14,15 +14,15 @@
 <div class="row match-height">
   
 
-
   <!-- Apply Job Card -->
-  @if($vendors != null)
-  @foreach($vendors as $vendor)
-  @if($vendor->user_role == 'vendor')
+  
   <div class="col-lg-4 col-md-6 col-12">
     <div class="card card-apply-job">
       <div class="card-body">
-        <div class="d-flex justify-content-between align-items-center mb-1">
+      @if($vendors != null)
+        @foreach($vendors as $vendor)
+        @if($vendor->user_role == 'vendor')
+          <div class="d-flex justify-content-between align-items-center mb-1">
           <div class="media">
             <div class="avatar mr-1">
               <img
@@ -46,12 +46,16 @@
             </p>
         
         <a href="/users/map/{{$vendor->id}}" class="btn btn-primary btn-block">View Map</a>
+        @endif
+      @endforeach
+      @else
+      <h2 class="h4">No nearest mechanics</h2>
+
+      @endif
       </div>
     </div>
   </div>
-  @endif
-  @endforeach
-  @endif
+ 
 </div>
 @endsection
 

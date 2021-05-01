@@ -4401,15 +4401,16 @@ $(function () {
   if ($('body').attr('data-framework') === 'laravel') {
     assetsPath = $('body').attr('data-asset-path');
   }
+  
   // Basic
   // --------------------------------------------------------------------
-  if ($('#basic-map').length) {
-    var basicMap = L.map('basic-map').setView([42.35, -71.08], 10);
-    L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
-      maxZoom: 18
-    }).addTo(basicMap);
-  }
+  // if ($('#basic-map').length) {
+  //   var basicMap = L.map('basic-map').setView([42.35, -71.08], 10);
+  //   L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+  //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+  //     maxZoom: 18
+  //   }).addTo(basicMap);
+  // }
 
   // Markers
   // --------------------------------------------------------------------
