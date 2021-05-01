@@ -24,7 +24,7 @@
         <div class="card-body">
           <div class="leaflet-map" id="basic-map"></div>
         </div>
-        <input type="text" value="{{$vendor->longitude}}" id="lon">
+        <input type="hidden" value="{{$vendor->longitude}}" id="lon">
         <input type="hidden" value="{{$vendor->latitude}}" id="lat">
       </div>
     </div>
