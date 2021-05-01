@@ -43,7 +43,7 @@
                 <th>Postal Code</th>
                 <th>User Role</th>
                 <th>Date</th>
-              
+
               </tr>
             </thead>
             <tbody>
@@ -64,7 +64,7 @@
                 <th>User Role</th>
                 <th>City</th>
                 <th>Date</th>
-              
+
               </tr>
             </tfoot>
           </table>

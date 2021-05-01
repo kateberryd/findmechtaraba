@@ -14,7 +14,9 @@ class AdminController extends Controller
         return redirect()->route('auth-login-v2');
         }else{
             $pageConfigs = ['pageHeader' => false];
-            return view('/content/dashboard/index', ['pageConfigs' => $pageConfigs]);
+            $vendor = User::where('user_role', 'vendor');
+            $motorist = User::where('user_role', 'user');
+            return view('/content/dashboard/index', ['pageConfigs' => $pageConfigs, 'motorist' => $motorist, 'vendor' => $vendor]);
         }
     }
     

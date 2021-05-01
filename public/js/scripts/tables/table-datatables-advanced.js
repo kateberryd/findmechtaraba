@@ -236,7 +236,7 @@ $(function () {
         { data: 'postal_code' },
         { data: 'user_role' },
         { data: 'created_at' },
-
+       
       ],
       columnDefs: [
         {

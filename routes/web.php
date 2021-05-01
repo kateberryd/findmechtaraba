@@ -16,7 +16,7 @@ Auth::routes(['verify' => true]);
 
 // Main Page Route
 Route::get('/', 'AuthController@login_v2')->name('auth-login-v2');
-Route::get('/admin/dashboard', 'AdminController@dashboard');
+Route::get('/admin/dashboard', 'AdminController@dashboard')->name('admin-dashboard');
 Route::group(['prefix' => 'dashboard'], function () {
   Route::get('analytics', 'DashboardController@dashboardAnalytics')->name('dashboard-analytics');
   Route::get('ecommerce', 'DashboardController@dashboardEcommerce')->name('dashboard-ecommerce');

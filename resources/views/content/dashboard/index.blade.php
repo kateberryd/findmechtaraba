@@ -6,7 +6,6 @@
 @section('vendor-style')
   <!-- vendor css files -->
   <link rel="stylesheet" href="{{ asset(mix('vendors/css/charts/apexcharts.css')) }}">
-  <link rel="stylesheet" href="{{ asset(mix('vendors/css/extensions/toastr.min.css')) }}">
   <link rel="stylesheet" href="{{ asset(mix('vendors/css/tables/datatable/datatables.min.css')) }}">
   <link rel="stylesheet" href="{{ asset(mix('vendors/css/tables/datatable/responsive.bootstrap.min.css')) }}">
 @endsection
@@ -21,6 +20,7 @@
 <!-- Dashboard Analytics Start -->
 <section id="dashboard-analytics">
   <div class="row match-height">
+  
     <!-- Greetings Card starts -->
     <div class="col-lg-12 col-md-12 col-sm-12">
       <div class="card card-congratulations">
@@ -48,6 +48,39 @@
         </div>
       </div>
     </div>
+    </div>
+    
+  <div class="row">
+    <div class="col-lg-6 col-sm-6 col-12">
+      <div class="card">
+        <div class="card-header flex-column align-items-start pb-0">
+          <div class="avatar bg-light-primary p-50 m-0">
+            <div class="avatar-content">
+              <i data-feather="users" class="font-medium-5"></i>
+            </div>
+          </div>
+          <h2 class="font-weight-bolder mt-1">{{$vendor->count()}}</h2>
+          <p class="card-text mb-3">Mechanics</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-6 col-12 ">
+      <div class="card">
+        <div class="card-header flex-column align-items-start pb-0">
+          <div class="avatar bg-light-primary p-50 m-0">
+            <div class="avatar-content">
+              <i data-feather="users" class="font-medium-5"></i>
+            </div>
+          </div>
+          <h2 class="font-weight-bolder mt-1">{{$motorist->count()}}</h2>
+          <p class="card-text mb-3">Motorist</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    
+    
     <!-- Greetings Card ends -->
 
 
@@ -58,7 +91,6 @@
 @section('vendor-script')
   <!-- vendor files -->
   <script src="{{ asset(mix('vendors/js/charts/apexcharts.min.js')) }}"></script>
-  <script src="{{ asset(mix('vendors/js/extensions/toastr.min.js')) }}"></script>
   <script src="{{ asset(mix('vendors/js/extensions/moment.min.js')) }}"></script>
   <script src="{{ asset(mix('vendors/js/tables/datatable/datatables.min.js')) }}"></script>
   <script src="{{ asset(mix('vendors/js/tables/datatable/datatables.buttons.min.js')) }}"></script>

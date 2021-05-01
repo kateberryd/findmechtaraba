@@ -3,7 +3,7 @@ $configData = Helper::applClasses();
 @endphp
 @extends('layouts/fullLayoutMaster')
 
-@section('title', 'Register Page')
+@section('title', 'Register')
 
 @section('page-style')
   {{-- Page Css files --}}
@@ -25,9 +25,9 @@ $configData = Helper::applClasses();
     <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
       <div class="w-100 d-lg-flex align-items-center justify-content-center px-5">
         @if($configData['theme'] === 'dark')
-        <img class="img-fluid" src="{{asset('images/pages/register-v2-dark.svg')}}" alt="Register V2" />
+        <img class="img-fluid" src="{{asset('images/pages/illus1.png')}}" alt="Login V2" />
         @else
-        <img class="img-fluid" src="{{asset('images/pages/register-v2.svg')}}" alt="Register V2" />
+        <img class="img-fluid" src="{{asset('images/pages/illus1.png')}}" alt="Login V2" />
         @endif
       </div>
     </div>

@@ -106,7 +106,7 @@ class AuthController extends Controller
     $user =   Sentinel::getUser();
     try {
       if (Sentinel::getUser()->roles()->first()->slug === 'admin') {						
-          return redirect()->route('dashboard');                  
+          return redirect()->route('admin-dashboard');                  
          }
         elseif (Sentinel::getUser()->roles()->first()->slug === 'vendor')  {
            return redirect()->route('dashboard');                          
