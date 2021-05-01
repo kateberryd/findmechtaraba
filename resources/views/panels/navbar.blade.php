@@ -41,24 +41,13 @@
           <ul class="nav navbar-nav d-xl-none">
             <li class="nav-item"><a class="nav-link menu-toggle" href="javascript:void(0);"><i class="ficon" data-feather="menu"></i></a></li>
           </ul>
-          <ul class="nav navbar-nav bookmark-icons">
-            <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{url('app/email')}}" data-toggle="tooltip" data-placement="top" title="Email"><i class="ficon" data-feather="mail"></i></a></li>
-            <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{url('app/chat')}}" data-toggle="tooltip" data-placement="top" title="Chat"><i class="ficon" data-feather="message-square"></i></a></li>
-            <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{url('app/calendar')}}" data-toggle="tooltip" data-placement="top" title="Calendar"><i class="ficon" data-feather="calendar"></i></a></li>
-            <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{url('app/todo')}}" data-toggle="tooltip" data-placement="top" title="Todo"><i class="ficon" data-feather="check-square"></i></a></li>
-          </ul>
+         
           <ul class="nav navbar-nav">
             <li class="nav-item d-none d-lg-block">
               <a class="nav-link bookmark-star">
                 <i class="ficon text-warning" data-feather="star"></i>
               </a>
-              <div class="bookmark-input search-input">
-                <div class="bookmark-input-icon">
-                  <i data-feather="search"></i>
-                </div>
-                <input class="form-control input" type="text" placeholder="Bookmark" tabindex="0" data-search="search">
-                <ul class="search-list search-list-bookmark"></ul>
-              </div>
+             
             </li>
           </ul>
         </div>
@@ -71,14 +60,7 @@
          
           </li>
           <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-style"><i class="ficon" data-feather="{{($configData['theme'] === 'dark') ? 'sun' : 'moon' }}"></i></a></li>
-          <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon" data-feather="search"></i></a>
-            <div class="search-input">
-              <div class="search-input-icon"><i data-feather="search"></i></div>
-              <input class="form-control input" type="text" placeholder="Explore Vuexy..." tabindex="-1" data-search="search">
-              <div class="search-input-close"><i data-feather="x"></i></div>
-              <ul class="search-list search-list-main"></ul>
-            </div>
-          </li>
+          
          
         <li class="nav-item dropdown dropdown-user">
           <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -86,6 +68,9 @@
             @if(Sentinel::getUser()->roles()->first()->slug === 'vendor')
               <span class="user-name font-weight-bolder">{{Sentinel::getUser()->first_name}}</span>
               <span class="user-status">Mechanic</span>
+            @elseif(Sentinel::getUser()->roles()->first()->slug === 'user')
+              <span class="user-name font-weight-bolder">{{Sentinel::getUser()->first_name}}</span>
+              <span class="user-status">Motorist</span>
             @else
              <span class="user-name font-weight-bolder">{{Sentinel::getUser()->first_name}}</span>
               <span class="user-status">Admin</span>
@@ -108,7 +93,7 @@
                                                             </form>
            
           </div>
-        </li>
+        </>
       </ul>
     </div>
   </nav>

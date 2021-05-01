@@ -15,13 +15,25 @@ use App\Http\Controllers\LanguageController;
 Auth::routes(['verify' => true]);
 
 // Main Page Route
-Route::get('/', 'PagesController@index')->name('index');
+Route::get('/', 'AuthController@login_v2')->name('auth-login-v2');
 Route::get('/admin/dashboard', 'AdminController@dashboard');
 Route::group(['prefix' => 'dashboard'], function () {
   Route::get('analytics', 'DashboardController@dashboardAnalytics')->name('dashboard-analytics');
   Route::get('ecommerce', 'DashboardController@dashboardEcommerce')->name('dashboard-ecommerce');
   Route::get('users', 'AdminController@index')->name('app-user-list');
   Route::get('all-users', 'AdminController@users');
+
+});
+
+
+
+Route::group(['prefix' => 'users'], function () {
+  Route::get('dashboard', 'MotoristController@dashboard')->name('motorist-dashboard');
+  Route::get('account-settings', 'MotoristController@account')->name('motorist-account');
+  Route::get('profile', 'MotoristController@profile')->name('motorist-profile');
+  Route::get('mechanics', 'MotoristController@findMechanic')->name('find-mechanic');
+  Route::get('map/{id}', 'MotoristController@viewMap')->name('view-map');
+  Route::post('account-settings', 'MotoristController@updateMotoristAccount')->name('motorist-account.post');
 
 });
 

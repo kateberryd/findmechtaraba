@@ -22,29 +22,29 @@ class AuthController extends Controller
    * @return [string] message
    */
   public function register(Request $request)
-  {
+  {    
+   
     $request->validate([
-      'name' => 'required|string',
       'email' => 'required|string|email|unique:users',
       'password' => 'required|string|',
       'confirm_password' => 'required|same:password',
     ]);
     
-    try{
-      
+    try{  
+        
+    $userRole = $request->user_role;
     $user = User::create([
       'name' => $request->name,
       'email' => $request->email,
+      'user_role'=> $request->user_role,
       'password' => bcrypt($request->password)
     ]);
     
-    $userRole = 'vendor';
-    
+
     $notification = array(
       'message' => "Login and update your account",
       'success' => 'success'
     );		
-
     
     $role = Sentinel::findRoleBySlug($userRole);
     $role->users()->attach($user);
@@ -94,20 +94,39 @@ class AuthController extends Controller
       'password' => 'required|string',
     ]);
     
+    $error = array(
+      'message' => 'Ops... Your Login Credentials did not match',
+      'error' => 'error'
+    );
+    
     $credentials = request(['email', 'password']);
     if (!Sentinel::forceauthenticate($credentials)){
-      return redirect()->back()->with('error', 'Ops... Your Login Credentials did not match');
+      return redirect()->back()->with($error);
     }
     $user =   Sentinel::getUser();
     try {
       if (Sentinel::getUser()->roles()->first()->slug === 'admin') {						
           return redirect()->route('dashboard');                  
          }
-      elseif (Sentinel::getUser()->roles()->first()->slug === 'vendor')  {
+        elseif (Sentinel::getUser()->roles()->first()->slug === 'vendor')  {
            return redirect()->route('dashboard');                          
         }
+        elseif (Sentinel::getUser()->roles()->first()->slug === 'user')  {
+          return redirect()->route('motorist-dashboard');                          
+       }
+      else{
+          $error = array(
+            'message' => 'unauthorized user',
+            'error' => 'error'
+          );
+          return redirect()->route('auth-login-v2')->with($error);
+      }
     }catch (\BadMethodCallException $e) {
-      return redirect()->route('login.get')->with('error', 'Your Session has expired. Please login again!');
+      $error = array(
+        'message' => 'Your Session has expired. Please login again!',
+        'error' => 'error'
+      );
+      return redirect()->route('auth-login-v2')->with($error);
     }
   }
 

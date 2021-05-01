@@ -2,22 +2,10 @@
   "menu": [
     {
       "name": "Dashboards",
-      "badge": "2",
-      "badgeClass": "badge badge-light-warning badge-pill ml-auto mr-1",
       "icon": "home",
-      "type": "vendor",
-      "slug": "",
-      "submenu": [
-        {
-          "url": "dashboard/analytics",
-          "name": "Analytics",
-          "icon": "circle",
-          "slug": "dashboard-analytics",
-          "type": "vendor"
-
-        }
-       
-      ]
+      "url": "/admin/dashboard",
+      "type": "admin",
+      "slug": ""
     },
     
     
@@ -41,13 +29,33 @@
     
     {
       "url": "/dashboard/profile",
-      "name": "profile",
+      "name": "Profile",
       "icon": "circle",
       "slug": "dashboard-profile",
       "type": "vendor"
 
+    },
+    
+    
+    {
+      "name": "Account Settings",
+      "url": "/users/account-settings",
+      "icon": "circle",
+      "slug": "account-settings",
+      "type": "user"
+    },
+    
+    
+    {
+      "url": "/users/profile",
+      "name": "Profile",
+      "icon": "circle",
+      "slug": "dashboard-profile",
+      "type": "user"
+
     }
-      
+     
+ 
   
    
   ]
