@@ -16,7 +16,7 @@
         <!-- profile cover photo -->
         <img
           class="card-img-top"
-          src="{{ $user->shop_image == null ? asset('images/profile/user-uploads/timeline.jpg')  :  asset('/uploads/'.$user->shop_image)}}"
+          src="{{ $user->shop_image == null ? asset('images/pages/illus03.jpg')  :  asset('/uploads/'.$user->shop_image)}}"
           alt="User Profile Image"
           height="200"
         />
@@ -61,7 +61,7 @@
               <div class="profile-tabs d-flex justify-content-between flex-wrap mt-1 mt-md-0">
          
                 <!-- edit button -->
-                <a href="/dashboard/account-settings/" class="btn btn-primary">
+                <a href="/users/account-settings/" class="btn btn-primary">
                   <i data-feather="edit" class="d-block d-md-none"></i>
                   <span class="font-weight-bold d-none d-md-block">Edit</span>
                 </a>
