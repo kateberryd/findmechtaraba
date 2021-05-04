@@ -16,7 +16,9 @@ $configData = Helper::applClasses();
   <div class="auth-inner row m-0">
       <!-- Brand logo-->
       <a class="brand-logo" href="javascript:void(0);">
-        <h2 class="brand-text text-primary ml-1">FindMechanic Wukari</h2>
+       <marquee width="100%" direction="left" height="100px">
+       <h2 class="brand-text text-primary ml-1">Vehicle Breakdown Emergency Response System</h2>
+      </marquee>
       </a>
       <!-- /Brand logo-->
       <!-- Left Text-->
@@ -36,7 +38,7 @@ $configData = Helper::applClasses();
               <div class="row">
                 @include('layouts.messages')
             </div>
-          <h4 class="card-title mb-1">Welcome to FindMechanic! &#x1F44B;</h4>
+          <h4 class="card-title mb-1">Welcome to Mechanic Finder! </h4>
           <form class="auth-login-form mt-2" action="{{route('login.post')}}" method="POST">
           @csrf
             <div class="form-group">
@@ -62,12 +64,7 @@ $configData = Helper::applClasses();
               </div>
               <small class="text-danger">{{$errors->first('password')}}</small>
             </div>
-            <div class="form-group">
-              <div div class="custom-control custom-checkbox">
-                <input class="custom-control-input" id="remember-me" type="checkbox" tabindex="3" />
-                <label class="custom-control-label" for="remember-me">Remember Me</label>
-              </div>
-            </div>
+           
             <button class="btn btn-primary btn-block" tabindex="4">Sign in</button>
           </form>
           <p class="text-center mt-2">

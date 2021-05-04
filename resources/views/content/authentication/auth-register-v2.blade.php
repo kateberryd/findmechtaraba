@@ -18,8 +18,10 @@ $configData = Helper::applClasses();
   <div class="auth-inner row m-0">
     <!-- Brand logo-->
     <a class="brand-logo" href="javascript:void(0);">
-      <h2 class="brand-text text-primary ml-1">FindMechanic Wukari</h2>
-    </a>
+       <marquee width="100%" direction="left" height="100px">
+       <h2 class="brand-text text-primary ml-1">Vehicle Breakdown Emergency Response System</h2>
+      </marquee>
+      </a>
     <!-- /Brand logo-->
     <!-- Left Text-->
     <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">

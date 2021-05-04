@@ -166,12 +166,24 @@ class AuthController extends Controller
     if(!Sentinel::forcecheck()){
       return redirect()->route('auth-login-v2');
     }else{
+      $request->validate([
+        'first_name' => 'required',
+        'last_name' => 'required',
+        'phone_number' => 'required',
+        'company_name' => 'required',
+        'company_address' => 'required',
+        'shop_image' => 'required|image'
+
+      ]);
+      
       $ip = trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com"));
       $geoipInfo = geoip()->getLocation($ip);
       $ipData = $geoipInfo->toArray();
       $id = Sentinel::getUser()->id;
       $user = User::where('id', $id)->first();
-      $imageName = time().'.'.$request->shop_image->extension();  
+      if($request->has('shop_image')) { 
+        $imageName = time().'.'.$request->shop_image->extension();                   
+      }
       $request->shop_image->move(public_path('uploads'), $imageName);
       $user->shop_image = $imageName;
       $user->first_name = $request->first_name;

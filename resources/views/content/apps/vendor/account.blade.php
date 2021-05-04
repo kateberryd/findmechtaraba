@@ -79,6 +79,8 @@
                   <button class="btn btn-sm btn-outline-secondary mb-75">Reset</button>
                   <p>Allowed JPG, GIF or PNG. Max size of 800kB</p>
                 </div>
+                <small class="text-danger">{{$errors->first('shop_image')}}</small>
+
                 <!--/ upload and reset button -->
               </div>
               <!--/ header media -->
@@ -97,6 +99,7 @@
                         placeholder="First Name"
                       />
                     </div>
+                    <small class="text-danger">{{$errors->first('first_name')}}</small>
                   </div>
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
@@ -109,6 +112,8 @@
                         placeholder="Last Name"
                       />
                     </div>
+                    <small class="text-danger">{{$errors->first('last_name')}}</small>
+
                   </div>
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
@@ -134,6 +139,8 @@
                         placeholder="Phone Number"
                       />
                     </div>
+                    <small class="text-danger">{{$errors->first('phone_number')}}</small>
+
                   </div>
                   
                   <div class="col-12 col-sm-6">
@@ -147,6 +154,8 @@
                         placeholder="Company name"
                       />
                     </div>
+                    <small class="text-danger">{{$errors->first('company_name')}}</small>
+
                   </div>  
                   
                   <div class="col-12 col-sm-6">
@@ -160,6 +169,8 @@
                         placeholder="Company Address"
                       />
                     </div>
+                    <small class="text-danger">{{$errors->first('company_address')}}</small>
+
                   </div>  
               
                 </div>

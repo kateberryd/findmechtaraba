@@ -6,7 +6,7 @@ $configData = Helper::applClasses();
     <ul class="nav navbar-nav flex-row">
       <li class="nav-item ">
         <a class="navbar-brand" href="{{url('/')}}">
-          <h2 class="brand-text">FindMech Wukari</h2>
+          <h2 class="brand-text">Mechanic Finder </h2>
         </a>
       </li>
       <li class="nav-item nav-toggle">

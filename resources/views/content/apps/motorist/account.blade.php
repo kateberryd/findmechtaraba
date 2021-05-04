@@ -67,6 +67,7 @@
                         placeholder="First Name"
                       />
                     </div>
+                    <small class="text-danger">{{$errors->first('first_name')}}</small>
                   </div>
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
@@ -79,6 +80,8 @@
                         placeholder="Last Name"
                       />
                     </div>
+                    <small class="text-danger">{{$errors->first('last_name')}}</small>
+
                   </div>
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
@@ -104,6 +107,8 @@
                         placeholder="Phone Number"
                       />
                     </div>
+                    <small class="text-danger">{{$errors->first('phone_number')}}</small>
+
                   </div>
                   
                   
@@ -114,12 +119,14 @@
                         type="text"
                         class="form-control"
                         id="account-company"
-                        name="company_address"
+                        name="address"
                         placeholder=" Address"
                       />
                     </div>
                   </div>  
-              
+                  
+                  <small class="text-danger">{{$errors->first('address')}}</small>
+
                 </div>
                 <div class="col-12">
                   </div>

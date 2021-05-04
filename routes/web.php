@@ -15,7 +15,7 @@ use App\Http\Controllers\LanguageController;
 Auth::routes(['verify' => true]);
 
 // Main Page Route
-Route::get('/', 'AuthController@login_v2')->name('auth-login-v2');
+Route::get('/', 'PagesController@index');
 Route::get('/admin/dashboard', 'AdminController@dashboard')->name('admin-dashboard');
 Route::group(['prefix' => 'dashboard'], function () {
   Route::get('analytics', 'DashboardController@dashboardAnalytics')->name('dashboard-analytics');

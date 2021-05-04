@@ -57,6 +57,12 @@ class MotoristController extends Controller
         if(!Sentinel::forcecheck()){
           return redirect()->route('auth-login-v2');
         }else{
+          $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'phone_number' => 'required',
+            'address' => 'required',    
+          ]);
           $ip = trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com"));
           $geoipInfo = geoip()->getLocation($ip);
           $ipData = $geoipInfo->toArray();
@@ -65,7 +71,7 @@ class MotoristController extends Controller
           $user->first_name = $request->first_name;
           $user->last_name = $request->last_name;
           $user->phone_number = $request->phone_number;
-          $user->company_address = $request->company_address;
+          $user->company_address = $request->address;
           $user->state = $ipData['state_name'];
           $user->latitude = $ipData['lat'];
           $user->longitude = $ipData['lon'];
