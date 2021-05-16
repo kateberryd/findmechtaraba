@@ -11,17 +11,17 @@
 
 @section('content')
 <!-- Card Advance -->
-<div class="row match-height">
+<div class="row">
   
 
   <!-- Apply Job Card -->
-  
-  <div class="col-lg-4 col-md-6 col-12">
-    <div class="card card-apply-job">
-      <div class="card-body">
-      @if($vendors != null)
+  @if($vendors != null)
         @foreach($vendors as $vendor)
         @if($vendor->user_role == 'vendor')
+  <div class="col-lg-4 col-md-4 col-12">
+    <div class="card card-apply-job">
+      <div class="card-body">
+     
           <div class="d-flex justify-content-between align-items-center mb-1">
           <div class="media">
             <div class="avatar mr-1">
@@ -39,24 +39,28 @@
           </div>
           <div class="badge badge-pill badge-light-primary"></div>
         </div>
-             <h5 class="apply-job-title">{{$vendor->company_name}}.</h5>
+             <h5 class="apply-job-title">Company Name: {{$vendor->company_name}}.</h5>
+             <p>Address:  {{$vendor->company_address}}</p>
             <p class="card-text mb-2">
-            {{$vendor->company_address}}
-            {{$vendor->phone_number}}
+            
+             Phone No: {{ $vendor->phone_number}}
             </p>
         
         <a href="/users/map/{{$vendor->id}}" class="btn btn-primary btn-block">View Map</a>
-        @endif
-      @endforeach
-      @else
-      <h2 class="h4">No nearest mechanics</h2>
-
-      @endif
+       
       </div>
     </div>
   </div>
+  @endif
+    @endforeach
+    @else
+    <h2 class="h4">No nearest mechanics</h2>
+
+    @endif
  
 </div>
+
+
 @endsection
 
 @section('vendor-script')

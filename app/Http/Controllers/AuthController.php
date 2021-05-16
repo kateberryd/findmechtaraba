@@ -167,11 +167,11 @@ class AuthController extends Controller
       return redirect()->route('auth-login-v2');
     }else{
       $request->validate([
-        'first_name' => 'required',
-        'last_name' => 'required',
+        // 'first_name' => 'required',
+        // 'last_name' => 'required',
         'phone_number' => 'required',
-        'company_name' => 'required',
-        'company_address' => 'required',
+        // 'company_name' => 'required',
+        // 'company_address' => 'required',
         'shop_image' => 'required|image'
 
       ]);
@@ -191,13 +191,8 @@ class AuthController extends Controller
       $user->phone_number = $request->phone_number;
       $user->company_name = $request->company_name;
       $user->company_address = $request->company_address;
-      $user->state = $ipData['state_name'];
-      $user->latitude = $ipData['lat'];
-      $user->longitude = $ipData['lon'];
-      $user->city = $ipData['city'];
-      $user->country = $ipData['country'];
-      $user->postal_code = $ipData['postal_code'];
-      $user->ip = $ipData['ip'];
+      $user->latitude = $request->latitude;
+      $user->longitude = $request->longitude;
       $user->user_role = "vendor";
       $user->save();
       $notification = array(

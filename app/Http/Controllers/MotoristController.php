@@ -100,12 +100,9 @@ class MotoristController extends Controller
       }
       
   public function findMechanic(Request $request){
-    $ip = trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com"));
-    $geoipInfo = geoip()->getLocation($ip);
-    $ipData = $geoipInfo->toArray();
     
-    $lat       =       $ipData['lat'];
-    $lon      =       $ipData['lon'];
+    $lat       =       "7.8681663777321535";
+    $lon      =       " 9.78345429599217";
 
     $vendors = DB::table("users")
     ->select("*"
@@ -119,7 +116,7 @@ class MotoristController extends Controller
     $vendors          =    $vendors->orderBy('distance', 'asc');
     $vendors   = $vendors->get();
     return view('/content/apps/motorist/mechanic')->with('vendors', $vendors);
-     }
+    }
   
   public function viewMap(Request $request, $id){
     $vendor = User::where('id', $id)->first();

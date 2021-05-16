@@ -17,8 +17,8 @@ class PagesController extends Controller
   
   public function index()
   {
-    $lat       =       "28.418715";
-    $lon      =       "77.0478997";
+    $lat       =       "7.8681663777321535";
+    $lon      =       " 9.78345429599217";
 
     $vendors = DB::table("users")
     ->select("*"
@@ -28,9 +28,10 @@ class PagesController extends Controller
         + sin(radians(" .$lat. ")) 
         * sin(radians(users.latitude))) AS distance"))
         ->groupBy("users.id");
-    $vendors  =  $vendors->having('distance', '<', 80000);
+    $vendors  =  $vendors->having('distance', '<', 800000);
     $vendors          =    $vendors->orderBy('distance', 'asc');
     $vendors   = $vendors->get();
+    dd($vendors);
     return view('/content/apps/index')->with('vendors', $vendors);
   }
 

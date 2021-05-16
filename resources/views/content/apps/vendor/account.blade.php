@@ -172,6 +172,36 @@
                     <small class="text-danger">{{$errors->first('company_address')}}</small>
 
                   </div>  
+                  
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label for="latitude">Latitude</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="latitude"
+                        name="latitude"
+                        placeholder="Latitude"
+                      />
+                    </div>
+                    <small class="text-danger">{{$errors->first('latitude')}}</small>
+
+                  </div>
+                  
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label for="longitude">Longitude</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="longitude"
+                        name="longitude"
+                        placeholder="Longitude"
+                      />
+                    </div>
+                    <small class="text-danger">{{$errors->first('longitude')}}</small>
+
+                  </div> 
               
                 </div>
                 <div class="col-12">
