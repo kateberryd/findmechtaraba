@@ -33,4 +33,14 @@ class AdminController extends Controller
         $users = User::all();
         return response()->json(['data' => $users,]);
     }
+    
+    public function user(){
+      if(!Sentinel::forcecheck()){
+          return redirect()->route('auth-login-v2');
+        }{
+        $pageConfigs = ['pageHeader' => false];
+        $users = User::all();
+      return view('/content/apps/user/app-user-view', ['pageConfigs' => $pageConfigs, 'users'=>$users]);
+        }
+  }
 }

@@ -21,7 +21,7 @@
 <section id="responsive-datatable">
   <div class="row">
     <div class="col-12">
-    <input type="hidden" value="http://localhost:8000" id="site_path">
+    <input type="hidden" value="http://findmechtaraba.herokuapp.com" id="site_path">
       <div class="card">
         <div class="card-header border-bottom">
           <h4 class="card-title">Users</h4>
